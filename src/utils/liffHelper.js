@@ -53,6 +53,19 @@ class liffHelper {
   closeWindow() {
     liff.closeWindow()
   }
+  getToken() {
+    const accessToken = liff.getAccessToken();
+    if(accessToken) {
+      fetch('https://api...', {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${accessToken}`
+        },
+    method: 'POST',
+    body: 'a=1&b=2'
+  })
+  }
+
 
   openWindow(url, external) {
     liff.openWindow({ url, external })
