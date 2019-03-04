@@ -54,10 +54,6 @@ class liffHelper {
     liff.closeWindow()
   }
 
-  getToken() {
-    const accessToken = liff.getAccessToken();
-  }
-
   openWindow(url, external) {
     liff.openWindow({ url, external })
   }
